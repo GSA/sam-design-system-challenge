@@ -21,5 +21,8 @@ export class DownloadItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  menuClicked($event){
+
+  }
 
 }

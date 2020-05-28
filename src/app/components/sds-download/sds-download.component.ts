@@ -16,4 +16,8 @@ export class SdsDownloadComponent implements OnInit {
   ngOnInit() {
   }
 
+  newSearch($event){
+    
+  }
+
 }
