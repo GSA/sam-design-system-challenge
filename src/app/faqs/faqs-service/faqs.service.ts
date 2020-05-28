@@ -58,14 +58,14 @@ export class FaqsService {
     return false;
   }
 
-  filter(result, filters) {
+  filterRecord(record, filters) {
     if (filters.type) {
-      if (!this.filterByType(result, filters.type)) {
+      if (!this.filterByType(record, filters.type)) {
         return false;
       }
     }
     if (filters.keyword) {
-      if (!this.filterByKeyword(result, filters.keyword)) {
+      if (!this.filterByKeyword(record, filters.keyword)) {
         return false;
       }
     }
@@ -78,71 +78,6 @@ export class FaqsService {
         result.description.toLowerCase().includes(keyword.items[0].value.toLowerCase())) {
         return true;
       }
-    }
-    return false;
-  }
-
-  private sortHelpItem(itemList: any, search: SearchParameters) {
-    console.log(itemList);
-    console.log(search);
-    let valueA = null;
-    let valueB = null;
-    let lessValueExpress = -1;
-    let moreValueExpress = 1;
-    itemList.sort((a, b) => {
-      console.log(search.sortField);
-      switch (search.sortField) {
-        case 'relevance':
-          lessValueExpress = -1;
-          moreValueExpress = 1;
-          valueA = a.title;
-          valueB = b.title;
-          break;
-        case 'latest':
-          lessValueExpress = 1;
-          moreValueExpress = -1;
-          valueA = new Date(a.lastModifiedDate);
-          valueB = new Date(b.lastModifiedDate);
-          break;
-        default:
-          break;
-      }
-      if (valueA < valueB) {
-        return lessValueExpress;
-      } else if (valueA > valueB) {
-        return moreValueExpress;
-      } else {
-        return 0;
-      }
-    });
-  }
-
-  filterRecord(record, filter) {
-    if (filter.terminationType) {
-      if (!this.filterTerminationType(record, filter.terminationType)) {
-        return false;
-      }
-    }
-    if (filter.recordType && filter.recordType.length > 0) {
-      if (!this.filterRecordType(record, filter.recordType)) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  filterTerminationType(record, terminationType) {
-    if (!terminationType.Complete && !terminationType.Partial && !terminationType.NA) {
-      return true;
-    }
-    if (terminationType.Complete && record.terminationType === 'Complete') {
-      return true;
-    }
-    if (terminationType.Partial && record.terminationType === 'Partial') {
-      return true;
-    }
-    if (terminationType.NA && record.terminationType === 'N/A') {
-      return true;
     }
     return false;
   }
