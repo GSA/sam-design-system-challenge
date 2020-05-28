@@ -2,40 +2,40 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { SearchParameters, SearchResult, SearchListConfiguration } from '@gsa-sam/layouts';
 import {faqsData} from './faqs.data';
+import {faqItemData} from './faq-items.data';
 
 
 /**
- *  The integrity service emulates basic sorting and filtering for most of the filters (except keyword).
+ *  The faq service emulates basic sorting and filtering for most of the filters (except keyword).
  */
 @Injectable()
 export class FaqsService {
 
-  constructor() { }
+  data: any;
+  currentItems: any[];
+  lastSearchParams: SearchParameters;
 
-  public model: SearchListConfiguration = {
-    defaultSortValue: 'awardeeAscending',
+  constructor() {
+    this.data = faqItemData;
+  }
+
+  public configuration: SearchListConfiguration = {
+    defaultSortValue: 'relevance',
     pageSize: 25,
-    sortList:
-      [
-        { text: 'Awardee Name (A-Z)', value: 'awardeeAscending' },
-        { text: 'Awardee Name (Z-A)', value: 'awardeeDescending' },
-        { text: 'Unique Entity ID (Low-High)', value: 'ueiAscending' },
-        { text: 'Unique Entity ID (High-Low)', value: 'ueiDescending' },
-        { text: 'Record Date (Newest)', value: 'dateDescending' },
-        { text: 'Record Date (Oldest)', value: 'dateAscending' },
-      ]
+    sortList: [
+      {text: 'Relevance', value: 'relevance'},
+      {text: 'Latest Update', value: 'lastmodifieddate'},
+      {text: 'Alphabetical (A-Z)', value: 'title-asc'},
+      {text: 'Alphabetical (Z-A)', value: 'title-desc'}
+    ]
   };
 
-  /*
-   * Here is the main method that the design system calls
-   */
   getData(search: SearchParameters): Observable<SearchResult> {
-
-    let records = faqsData;
+    let records = faqItemData.contentDataList;
 
     /* Filter */
     if (search && search.filter) {
-      records = faqsData.filter(record => this.filterRecord(record, search.filter));
+      records = faqItemData.contentDataList.filter(record => this.filterRecord(record, search.filter));
     }
 
     /* Sort */
@@ -50,6 +50,73 @@ export class FaqsService {
     });
   }
 
+  filterByType(result, types) {
+    if (types.article && result.type == 4) { return true; }
+    if (types.video && result.type == 3) { return true; }
+    if (types.faq && result.type == 2) { return true; }
+    if (types.term && result.type == 1) { return true; }
+    return false;
+  }
+
+  filter(result, filters) {
+    if (filters.type) {
+      if (!this.filterByType(result, filters.type)) {
+        return false;
+      }
+    }
+    if (filters.keyword) {
+      if (!this.filterByKeyword(result, filters.keyword)) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  filterByKeyword(result, keyword) {
+    for (let i = 0; i < keyword.items.length; i++) {
+      if (result.title.toLowerCase().includes(keyword.items[0].value.toLowerCase()) ||
+        result.description.toLowerCase().includes(keyword.items[0].value.toLowerCase())) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private sortHelpItem(itemList: any, search: SearchParameters) {
+    console.log(itemList);
+    console.log(search);
+    let valueA = null;
+    let valueB = null;
+    let lessValueExpress = -1;
+    let moreValueExpress = 1;
+    itemList.sort((a, b) => {
+      console.log(search.sortField);
+      switch (search.sortField) {
+        case 'relevance':
+          lessValueExpress = -1;
+          moreValueExpress = 1;
+          valueA = a.title;
+          valueB = b.title;
+          break;
+        case 'latest':
+          lessValueExpress = 1;
+          moreValueExpress = -1;
+          valueA = new Date(a.lastModifiedDate);
+          valueB = new Date(b.lastModifiedDate);
+          break;
+        default:
+          break;
+      }
+      if (valueA < valueB) {
+        return lessValueExpress;
+      } else if (valueA > valueB) {
+        return moreValueExpress;
+      } else {
+        return 0;
+      }
+    });
+  }
+
   filterRecord(record, filter) {
     if (filter.terminationType) {
       if (!this.filterTerminationType(record, filter.terminationType)) {
@@ -58,11 +125,6 @@ export class FaqsService {
     }
     if (filter.recordType && filter.recordType.length > 0) {
       if (!this.filterRecordType(record, filter.recordType)) {
-        return false;
-      }
-    }
-    if (filter.awardee) {
-      if (!this.filterAwardee(record, filter.awardee)) {
         return false;
       }
     }
@@ -94,47 +156,15 @@ export class FaqsService {
     return false;
   }
 
-  filterAwardee(record, awardee) {
-    for (let i = 0; awardee.name && i < awardee.name.length; i++) {
-      if (record.awardeeName == awardee.name[i].AWARDEE) {
-        return true;
-      }
-    }
-    for (let i = 0; awardee.ueiduns && i < awardee.ueiduns.length; i++) {
-      if (record.DUNS == awardee.ueiduns[i].DUNS) {
-        return true;
-      }
-    }
-    for (let i = 0; awardee.cage && i < awardee.cage.length; i++) {
-      if (record.CAGE == awardee.cage[i].CAGE) {
-        return true;
-      }
-    }
-    if ((!awardee.name || (awardee.name && awardee.name.length == 0)) &&
-      (!awardee.ueiduns || (awardee.ueiduns && awardee.ueiduns.length == 0)) &&
-      (!awardee.cage || (awardee.cage && awardee.cage.length == 0))) {
-      return true;
-    }
-    return false;
-  }
-
   sortRecords(records, search: SearchParameters) {
     records.sort((a, b) => {
       switch (search.sortField) {
-        case 'awardeeAscending':
-          return (a.awardeeName > b.awardeeName) ? 1 : -1;
-        case 'awardeeDescending':
-          return (a.awardeeName > b.awardeeName) ? -1 : 1;
-        case 'ueiAscending':
-          return (a.DUNS > b.DUNS) ? 1 : -1;
-        case 'ueiDescending':
-          return (a.DUNS > b.DUNS) ? -1 : 1;
-        case 'dateAscending':
-          return ((new Date(a.recordDate)) > (new Date(b.recordDate))) ? 1 : -1;
-        case 'dateDescending':
-          return ((new Date(a.recordDate)) > (new Date(b.recordDate))) ? -1 : 1;
+        case 'relevance':
+          return (a.title > b.title) ? 1 : -1;
+        case 'lastmodifieddate':
+          return ((new Date(a.lastModifiedDate)) > (new Date(b.lastModifiedDate))) ? 1 : -1;
         default: {
-          return (a.awardeeName > b.awardeeName) ? 1 : -1;
+          return (a.title > b.title) ? 1 : -1;
         }
       }
     });
