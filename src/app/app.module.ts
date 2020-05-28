@@ -14,6 +14,7 @@ import {OppsModule} from './opps-workspace/opps.module'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AppComponent } from './app.component';
     SamFooterModule,
     SamHeaderModule,
     AppRoutingModule,
-    OppsModule
+    OppsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

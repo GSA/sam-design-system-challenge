@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocationStrategy } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,9 @@ export class AppService {
 
   signedIn: boolean = false;
 
-  constructor(public router: Router, private locationStrategy: LocationStrategy) {
+  constructor(public router: Router, private locationStrategy: LocationStrategy,private http: HttpClient) {
+    
+    //this.getOppsData().subscribe(data=> console.log("data" + JSON.stringify(data)));
   }
 
   signIn(redirectUrl?: string) {
@@ -30,5 +33,9 @@ export class AppService {
 
   goTo(url: string) {
     this.router.navigateByUrl(url);
+  }
+
+  getOppsData(){
+    return this.http.get('assets/opps.json');    
   }
 }

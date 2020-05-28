@@ -15,7 +15,7 @@ export class OppsFiltersComponent implements OnInit {
   form = new FormGroup({});
   model: any = {};
   options: FormlyFormOptions = {};
-  $status: string[] = [];
+ 
   /**
    * Event when something is checked/selected in the grid
    */
@@ -23,53 +23,25 @@ export class OppsFiltersComponent implements OnInit {
 
   fields: FormlyFieldConfig[] = [
     {
-      key: 'keyword',
-      wrappers: ['filterwrapper'],
-      templateOptions: { label: 'Keyword' },
+      
       fieldGroup: [
         {
           key: 'keyword',
           type: 'input',
-          modelOptions: {
-            updateOn: 'blur',
-          },
           templateOptions: {
             placeholder: '',
             inputType: 'text',
-            label: 'Keyword',
-            labelClass: 'usa-sr-only'
+            label: 'Keyword'
+            
           }
         }
       ]
     },
    
     {
-      key: 'Active Only',
-      wrappers: ['accordionwrapper'],
-      templateOptions: { label: 'Request Types' },
-      fieldGroup: [
-        {
-          key: 'Active Only',
-          type: 'multicheckbox',
-          templateOptions: {
-            options: [
-              {
-                key: 'federal',
-                value: 'Federal'
-              },
-              {
-                key: 'non-federal',
-                value: 'Non-Federal'
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
       key: 'status',
       wrappers: ['accordionwrapper'],
-      templateOptions: { label: 'Status' },
+      templateOptions: { label: 'Status'},
       fieldGroup: [
         {
           key: 'status',
@@ -77,76 +49,36 @@ export class OppsFiltersComponent implements OnInit {
           templateOptions: {
             options: [
               {
-                key: 'draft',
-                value: 'Draft'
+                key: 'active_only',
+                value: 'Active Only'
               },
               {
-                key: 'pending review',
-                value: 'Pending Review'
-              },
-              {
-                key: 'pending permissions approval',
-                value: 'Pending Permissions Approval'
-              },
-
-              {
-                key: 'pending approval',
-                value: 'Pending Approval' 
-              },
-              {
-                key: 'approved',
-                value: 'Published'
-              },
-              {
-                key: 'deactivated',
-                value: 'Deactivated'
-              },
-              {
-                key: 'change request',
-                value: 'Change Request'
+                key: 'draft_only',
+                value: 'Draft Only'
               }
             ]
           }
         }
-      ] 
+      ]
     },
+    
     {
-      key: 'domain',
+      key: 'published date',
       wrappers: ['accordionwrapper'],
-      templateOptions: { label: 'Domain' },
+      templateOptions: { label: 'Published Date' },
       fieldGroup: [
         {
-          key: 'domain',
+          key: 'published date',
           type: 'multicheckbox',
           templateOptions: {
             options: [
               {
-                key: 'assistanceListings',
-                value: 'Assistance Listings'
+                key: 'any_time',
+                value: 'Any Time'
               },
               {
-                key: 'contractData',
-                value: 'Contract Data'
-              },
-              {
-                key: 'contractOpportunities',
-                value: 'Contract Opportunities'
-              },
-              {
-                key: 'entityInformation',
-                value: 'Entity Information'
-              },
-              {
-                key: 'federalHierarchy',
-                value: 'Federal Hierarchy'
-              },
-              {
-                key: 'referenceData',
-                value: 'Reference Data'
-              },
-              {
-                key: 'wageDeterminations',
-                value: 'Wage Determinations'
+                key: 'past_day',
+                value: 'Past Day'
               }
             ]
           }
@@ -156,11 +88,84 @@ export class OppsFiltersComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.filterChange$.subscribe(res => {
+      if (res) {
+        this.search(res);
+      }
+    });
 
-    console.log("qqqqqqq");
   }
+
+   /**
+   * executes search when ever there is a change in filter
+   * @param model 
+   */
+  search(model: any) {
+    Object.keys(model).map(key => {
+      const values = model[key][key];
+      let param = {};
+      if (values) {
+        if (key === 'status') {
+          const status = this.getSelectedStatus(values);
+          param = {
+            [key]: (status.length > 0) ? status : null
+          }
+        } else if (key === 'published date') {
+          param = this.getSelectedPublishedDates(values);
+        }
+        else {
+          param = { [key]: values };
+        }
+        
+      }else{
+        param = { [key]: null };
+      }
+      this.queryParams = Object.assign({}, this.queryParams, param);
+    });
+    this.router.navigate(['/workspace/opps'], {
+      queryParams: this.queryParams,
+      queryParamsHandling: 'merge'
+    });
+  }
+
+
+  /**
+   * 
+   * @param selections selected options in filter
+   * @returns string of comma selected values
+   */
+  getSelectedStatus(selections: any): string {
+    return this.getMulticheckboxSelections(selections).join(",")
+  }
+
+   /**
+   * 
+   * @param selections 
+   * @returns string [] of selected values
+   */
+  getMulticheckboxSelections(selections: any): string[] {
+    return Object.keys(selections).reduce((acc, key) => {
+      selections[key] ? acc.push(key) : null;
+      return acc;
+    }, []);
+  }
+
+
+   /**
+   * 
+   * @param selections selected options in filter
+   * @returns object with selected values ex: {any time: true, past date: null}
+   */
+  getSelectedPublishedDates(selections: any): any {
+    return Object.keys(selections)
+      .reduce((acc, key) => {
+        selections[key] ? (acc[key] = selections[key]) : (acc[key] = null);
+        return acc;
+      }, {});
+  }
+
 
 }
