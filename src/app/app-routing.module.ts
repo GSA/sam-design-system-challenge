@@ -11,6 +11,11 @@ const routes: Routes = [
     loadChildren: () => import('./faqs/faqs-workspace/cms-workspace.module').then(m => m.CmsWorkspaceModule)
   },
   {
+	path:'workspace/faqs/create',
+    loadChildren: () => import('./faqs/faq-form/faq-form.module').then(m => m.FaqFormModule)
+	  
+  },
+  {
     path: '**',
     redirectTo: '/workspace/faqs', pathMatch: 'full'
   }

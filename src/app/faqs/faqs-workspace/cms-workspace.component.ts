@@ -7,6 +7,8 @@ import {
   OnChanges,
   ChangeDetectionStrategy
 } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import {FormlyFieldConfig} from '@ngx-formly/core';
 
@@ -49,7 +51,8 @@ export class CmsWorkspaceComponent implements OnInit, AfterViewInit {
   // navigationModel = workspaceMenuData;
 
   constructor(private change: ChangeDetectorRef, public service: FaqsService,
-              public filtersService: CmsFiltersService) {
+              public filtersService: CmsFiltersService,
+			  private router: Router) {
   }
 
   ngOnInit() {
@@ -64,7 +67,9 @@ export class CmsWorkspaceComponent implements OnInit, AfterViewInit {
   }
 
   newAccount(event) {
+	this.router.navigate(['/workspace/faqs/create']);
     console.log(`%cLog: Creating new account`, 'color: blue; font-weight: bold');
+	
   }
 
   newSearch(event) {
