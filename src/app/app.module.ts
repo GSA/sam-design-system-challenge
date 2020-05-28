@@ -10,9 +10,11 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 import { SamFooterModule } from './common/sam-footer/sam-footer.module';
 import { SamHeaderModule } from './common/sam-header/sam-header.module';
+import {OppsModule} from './opps-workspace/opps.module'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     SamFooterModule,
     SamHeaderModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OppsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
