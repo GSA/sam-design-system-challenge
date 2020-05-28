@@ -1,0 +1,1065 @@
+{ 
+    "results": [
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-28T09:21:44-04:00",
+        "isActive": true,
+        "title": "FA301620R0003",
+        "type": {
+          "code": "p",
+          "value": "Presolicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "CLOUTIER02-FA301620R0003-TR",
+        "responseDate": null,
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-28T09:21:44-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "16296be7fd534240b0e7de72ee548036",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-28T09:05:59-04:00",
+        "isActive": true,
+        "title": "D--Multiple Award Schedule",
+        "type": {
+          "code": "k",
+          "value": "Combined Synopsis/Solicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "47QSMD20R0001",
+        "responseDate": "2025-05-27T00:00:00-04:00",
+        "parentNoticeId": "050f4fc9f90b02472860081dad54a9c1",
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-28T09:05:59-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "8621479bbac04d8580b373b0b7c0e51b",
+        "modifications": {
+          "count": 94
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T22:19:01-04:00",
+        "isActive": true,
+        "title": "AEGIS DEV AND TEST SITES OPERATION AND MAINTENANCE -- 5840",
+        "type": {
+          "code": "p",
+          "value": "Presolicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "N0016720R0056",
+        "responseDate": null,
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T22:19:01-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000188",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE NAVY",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100005213",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "NAVSEA",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100076477",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "NAVSEA WARFARE CENTER",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100204041",
+            "address": {
+              "zip": "20817-5700",
+              "country": "USA",
+              "city": "BETHESDA",
+              "streetAddress": "CARDEROCK DIVISION",
+              "streetAddress2": "9500 MACARTHUR BOULEVARD",
+              "state": "MD"
+            },
+            "level": 5,
+            "name": "NSWC CARDEROCK",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "0b83e3795441458b819fd3af43e84ea6",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T18:07:23-04:00",
+        "isActive": true,
+        "title": "Recovery Special Notice Subject -- 1020",
+        "type": {
+          "code": "s",
+          "value": "Special Notice"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "QN--QNMK-3374E",
+        "responseDate": null,
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T18:07:23-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "e6749a367998418cb989ed40417f20a4",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T17:55:12-04:00",
+        "isActive": true,
+        "title": "No CS or KO -- B544",
+        "type": {
+          "code": "o",
+          "value": "Solicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "N0016720Q0048",
+        "responseDate": "2020-07-29T00:00:00-04:00",
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T17:55:12-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000188",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE NAVY",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100005213",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "NAVSEA",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100076477",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "NAVSEA WARFARE CENTER",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100204041",
+            "address": {
+              "zip": "20817-5700",
+              "country": "USA",
+              "city": "BETHESDA",
+              "streetAddress": "CARDEROCK DIVISION",
+              "streetAddress2": "9500 MACARTHUR BOULEVARD",
+              "state": "MD"
+            },
+            "level": 5,
+            "name": "NSWC CARDEROCK",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "3cdc4703e1a94869a004891d5f0cb7d4",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T17:21:24-04:00",
+        "isActive": true,
+        "title": "Transmission Test with CS only -- B544",
+        "type": {
+          "code": "o",
+          "value": "Solicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "N0016720Q0047",
+        "responseDate": "2020-07-22T00:00:00-04:00",
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T17:21:24-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],          
+        "_id": "42911c54175b4ed7abc4bcce275b7836",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T17:18:55-04:00",
+        "isActive": true,
+        "title": "Recovery Presol -- 1075",
+        "type": {
+          "code": "p",
+          "value": "Presolicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "QS--QSMK-3381B",
+        "responseDate": null,
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T17:18:55-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "170554689df24d9695588522fc2ac9f0",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T16:53:19-04:00",
+        "isActive": true,
+        "title": "Recovery Presol -- 1075",
+        "type": {
+          "code": "p",
+          "value": "Presolicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "QS--QSMK-3381",
+        "responseDate": null,
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T16:53:19-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "552361a3447d4763a7144dc5ff6a7427",
+        "modifications": {
+          "count": 0
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T16:47:50-04:00",
+        "isActive": true,
+        "title": "Regression Test -- 1385",
+        "type": {
+          "code": "o",
+          "value": "Solicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "15A00020PR00000081",
+        "responseDate": "2020-08-08T00:00:00-04:00",
+        "parentNoticeId": "44d297fe900c44b5b9637c45f96b596f",
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T16:47:50-04:00",
+        "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "73821b08c921440dbd533d029c444f5b",
+        "modifications": {
+          "count": 1
+        }
+      },
+      {
+        "isCanceled": false,
+        "_rScore": 0,
+        "_type": "opportunity",
+        "publishDate": "2020-05-27T16:35:54-04:00",
+        "isActive": true,
+        "title": "ALPHA SAM TEST -- 1385",
+        "type": {
+          "code": "o",
+          "value": "Solicitation"
+        },
+        "descriptions": [
+          
+        ],
+        "solicitationNumber": "15A00020PR00000085",
+        "responseDate": "2020-08-08T00:00:00-04:00",
+        "parentNoticeId": null,
+        "award": {
+          "awardee": {
+            "name": null,
+            "duns": null
+          }
+        },
+        "modifiedDate": "2020-05-27T16:35:54-04:00",
+       "organizationHierarchy": [
+          {
+            "organizationId": "100000000",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 1,
+            "name": "DEPT OF DEFENSE",
+            "type": "DEPARTMENT",
+            "status": "active"
+          },
+          {
+            "organizationId": "300000251",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 2,
+            "name": "DEPT OF THE AIR FORCE",
+            "type": "AGENCY",
+            "status": "active"
+          },
+          {
+            "organizationId": "100000831",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 3,
+            "name": "AETC",
+            "type": "MAJOR COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100112304",
+            "address": {
+              "zip": null,
+              "country": null,
+              "city": null,
+              "streetAddress": null,
+              "streetAddress2": null,
+              "state": null
+            },
+            "level": 4,
+            "name": "JOINT BASE SAN ANTONIO",
+            "type": "SUB COMMAND",
+            "status": "active"
+          },
+          {
+            "organizationId": "100242337",
+            "address": {
+              "zip": "78236-5286",
+              "country": "USA",
+              "city": "JBSA LACKLAND",
+              "streetAddress": "CP 210 671 1949",
+              "streetAddress2": "1655 SELFRIDGE AVE",
+              "state": "TX"
+            },
+            "level": 5,
+            "name": "FA3047  802 CONS CC JBSA",
+            "type": "OFFICE",
+            "status": "active"
+          }
+        ],
+        "_id": "401f4cdb1d3d43ea930c823685cb1011",
+        "modifications": {
+          "count": 0
+        }
+      }
+    ]
+  
+}
