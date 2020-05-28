@@ -1,0 +1,24 @@
+<div class="grid-container">
+	<div class="grid-row grip-gap bg-accent-cool-lighter flex-justify-center">
+	<ul class="usa-button-group usa-button-group--segmented tablet:grid-col-9 grid-col-12 padding-x-1 margin-y-2">
+  <button class="usa-button">Edit</button>
+
+  <button class="usa-button usa-button--outline">View Public</button>
+</ul>
+		<div class="tablet:grid-col-9 grid-col-12 padding-x-4 margin-y-2 bg-white">
+			<form class="usa-form" [formGroup]="form">
+				<fieldset class="usa-fieldset">
+					<legend class="usa-legend">Create FAQ</legend>
+					<formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+				</fieldset>
+			</form>
+			<input class="usa-button-base" type="submit" value="Cancel">
+			<input class="usa-button-base" type="submit" value="Submit">
+		</div>
+	</div>
+</div>
+ <script type="text/ng-template" id="ckeditor.html">
+<textarea  ckeditor="editorOptions"
+           ng-model="model[options.key]">
+</textarea>
+</script>

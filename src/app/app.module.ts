@@ -13,12 +13,14 @@ import { SamHeaderModule } from './common/sam-header/sam-header.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {FaqFormModule} from './faqs/faq-form/faq-form.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    FaqFormModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
     BrowserModule,
