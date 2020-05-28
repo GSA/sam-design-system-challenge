@@ -1,13 +1,21 @@
-<sds-page>
-    <sds-page-options>
-        <sds-toolbar #toolbar="sdsToolbar" class="top-205" [expanded]="true">
-            <sds-accordion>
-                <sds-accordion-item [expanded]="true">
-                    <sds-accordion-item-header> Filter By </sds-accordion-item-header>
-                    <opps-filters></opps-filters>
-                </sds-accordion-item>
-            </sds-accordion>
-        </sds-toolbar>
-        <opps-resultset></opps-resultset>
-    </sds-page-options>
-</sds-page>
+<main>
+	<div class="grid-container">
+		<div class="sds-page condensed">
+			<div class="grid-row grid-gap-4">
+				<div class="grid-col-12 tablet:grid-col-auto">
+				    <sds-toolbar #toolbar="sdsToolbar" class="top-205" [expanded]="true">
+                        <sds-accordion>
+                            <sds-accordion-item [expanded]="true">
+                                <sds-accordion-item-header> Filter By </sds-accordion-item-header>
+                                <opps-filters></opps-filters>                               
+                            </sds-accordion-item>
+                        </sds-accordion>
+                    </sds-toolbar>
+				</div>
+				<div class="grid-col-12 tablet:grid-col-fill">
+                    <opps-resultset></opps-resultset>
+		  		</div>
+		  	</div>
+	     </div> 
+	</div>
+</main>
