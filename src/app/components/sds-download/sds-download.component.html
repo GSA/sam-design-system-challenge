@@ -1,0 +1,36 @@
+<sds-subheader>
+	<!-- BACK BUTTON -->
+	<button class="sds-button sds-button--circular">
+		<span class="sr-only">Back</span>
+		<fa-icon [icon]="['fas', 'chevron-left']" [fixedWidth]="true"></fa-icon>
+	</button>
+
+	<!-- TITLE -->
+	<h1 class="font-heading-md text-semibold tablet-lg:width-mobile">Downloads Workspace</h1>
+
+	<!-- SEARCH (OPTIONAL) -->
+	<sds-search (term)="newSearch($event)" parentSelector=".grid-row" placeholder="Enter an ID, name, or keyword"
+		inputClass="width-card-lg widescreen:width-mobile display-none desktop-lg:display-inline-block"></sds-search>
+</sds-subheader>
+<main>
+	<div class="grid-container">
+		<div class="sds-page condensed">
+			<div class="grid-row grid-gap-4">
+				<div class="grid-row grid-gap-4">
+					<div class="grid-col-12 tablet:grid-col-auto">
+						<app-download-filters></app-download-filters>
+					</div>
+					<div class="grid-col-12 tablet:grid-col-fill">
+						<search-list-layout #resultList [service]="service" [configuration]="service.model">
+							<ng-template #resultContent let-item>
+								<div>
+									<download-item [model]="item"></download-item>
+								</div>
+							</ng-template>
+						</search-list-layout>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

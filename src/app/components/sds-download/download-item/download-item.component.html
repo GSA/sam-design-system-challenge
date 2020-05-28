@@ -1,0 +1,42 @@
+<div class="grid-row grid-gap">
+	<div class="tablet-lg:grid-col-fill">
+		<h2  class="sds-card--subtitle"><a class="usa-link">{{model.fileName}}</a></h2>
+	</div>
+	<div class="tablet-lg:grid-col-auto">
+		<div class="grid-row grid-gap">
+		    <div class="mobile:grid-auto">
+               <span class="sds-type--label-title">Status</span>
+               <span [class.sds-tag--outline-green]="model?.status == 'Active'"
+			      [class.sds-tag--outline-red]="model?.status == 'Expired'"
+			      class="sds-tag sds-tag--outline flex-justify-center">{{model?.status}}</span>
+            </div>
+			<div class="mobile:grid-auto">
+		        <span class="sds-type--label-title">Create Date</span>
+		        <span class="sds-tag sds-tag--outline flex-justify-center">{{model.createDate | date }}</span>
+		    </div>
+		    <div class="mobile:grid-auto">
+		        <span class="sds-type--label-title">Expire Date</span>
+		        <span class="sds-tag sds-tag--outline flex-justify-center">{{model.expireDate | date }}</span>
+		    </div>
+			<div class="mobile:grid-auto">
+				<sds-actions-menu [model]="menu" (clicks)="menuClicked($event)"></sds-actions-menu>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="grid-row grid-gap">
+	<div class="tablet:grid-col sds-field sds-field--stacked">
+        <div class="sds-field__name">Format</div>
+        <div class="sds-field__value">{{model.format}}</div>
+    </div>
+    <div class="tablet:grid-col sds-field sds-field--stacked">
+        <div class="sds-field__name">Type</div>
+        <div class="sds-field__value">{{model.searchType}}</div>
+    </div>
+</div>
+<div class="grid-row grid-gap">
+	<div class="tablet:grid-col sds-field sds-field--stacked">
+        <div class="sds-field__name">Domain</div>
+        <div class="sds-field__value">{{model.domain}}</div>
+    </div>
+</div>

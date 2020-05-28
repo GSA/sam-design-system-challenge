@@ -1,0 +1,8 @@
+<sds-toolbar  class="top-205" [expanded]="true">
+  <sds-accordion>
+    <sds-accordion-item [expanded]="true">
+      <sds-accordion-item-header> Refine By</sds-accordion-item-header>
+       <sds-filters [form]="form" [fields]="fields" [model]="model" [isHistoryEnable]="false" (filterChange) = "filterChange$.next($event)" ></sds-filters>
+    </sds-accordion-item>
+  </sds-accordion>
+</sds-toolbar>
