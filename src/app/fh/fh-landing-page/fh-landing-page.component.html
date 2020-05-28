@@ -1,0 +1,18 @@
+<app-fh-sub-header (searchEvent)="search($event)"></app-fh-sub-header>
+<div class="grid-container grid-row margin-top-4">
+  <div class="grid-col-3">
+    <div class="margin-bottom-4">
+      <app-fh-nav-header [userOrg]="{}" (editClicked)="onEditOrg({})"></app-fh-nav-header>
+    </div>
+    <app-fh-filters (filterChange)="onFilterChange($event)"></app-fh-filters>
+  </div>
+  <div class="grid-col-8" *ngIf="(searchResults$ | async) as searchResults">
+    <app-fh-page-controls [page]="paginationModel" (pageChange)="onPageChange($event)"></app-fh-page-controls>
+    <sds-search-result-list [model]="searchResults.orglist">
+      <ng-template #resultContent let-org>
+        <!--Pass in org here as input to card-->
+        <app-fh-result-card [org]="org" (editOrg)="onEditOrg($event)"></app-fh-result-card>
+      </ng-template>
+    </sds-search-result-list>
+  </div>
+</div>
