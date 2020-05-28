@@ -1,4 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AlertComponent } from '../../../common/alerts/alerts.component';
+import {
+  SdsDialogService,
+  SdsDialogRef,
+  SDS_DIALOG_DATA
+} from '@gsa-sam/components';
 
 @Component({
   selector: 'download-item',
@@ -16,13 +22,17 @@ export class DownloadItemComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(public dialog: SdsDialogService) { }
 
   ngOnInit() {
   }
 
   menuClicked($event){
-
+    const dialogRef = this.dialog.open(AlertComponent, {
+      alert: 'warning',
+      width: 'small',
+      data: { title: 'Confirm Delete', content: 'Are you sure you want to delete this record?' }
+    });
   }
 
 }

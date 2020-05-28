@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { sds } from '@gsa-sam/sam-styles/src/icons/';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { SdsActionsMenuModule } from '@gsa-sam/layouts';
+import { AlertComponent } from '../../../common/alerts/alerts.component';
 
 @NgModule({
   declarations: [DownloadItemComponent],
@@ -14,7 +15,10 @@ import { SdsActionsMenuModule } from '@gsa-sam/layouts';
     FontAwesomeModule,
     SdsActionsMenuModule
   ],
-  exports: [DownloadItemComponent]
+  exports: [DownloadItemComponent],
+  entryComponents: [
+    AlertComponent
+  ]
 })
 export class DownloadItemModule { 
   constructor() {

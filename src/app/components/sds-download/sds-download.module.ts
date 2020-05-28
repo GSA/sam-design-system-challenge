@@ -17,7 +17,8 @@ import { SdsSubheaderModule, SearchListServiceModule } from '@gsa-sam/layouts';
 import { DownloadItemModule } from './download-item/download-item.module';
 import { SdsDownloadComponent } from './sds-download.component';
 import { SdsDownloadRoutingModule } from './sds-download-routing.module';
-import { DownloadFiltersModule } from './download-filter/download-filters.module'
+import { DownloadFiltersModule } from './download-filter/download-filters.module';
+import { AlertsModule } from '../../common/alerts/alerts.module';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DownloadFiltersModule } from './download-filter/download-filters.module
     SearchListServiceModule,
     DownloadItemModule,
     SdsDownloadRoutingModule,
-    DownloadFiltersModule
+    DownloadFiltersModule,
+    AlertsModule
   ],
   exports: [SdsDownloadComponent],
   providers: [SDSFormlyUpdateComunicationService]
